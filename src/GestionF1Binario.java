@@ -1,15 +1,36 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+public class GestionF1Binario {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        List<Piloto> pilotos = new ArrayList<>((cargarPilotos.cargarPilotos()));
+        boolean seguir = true;
+
+        while (seguir) {
+            System.out.println("Elija la opcion: (0=mostrar pilotos, 1=Agregar piloto, 2=buscar piloto, 3=sobreescribir y borrar");
+            int opcion = sc.nextInt();
+            switch (opcion) {
+                case 0:
+                    System.out.println();
+                    Mostrar.mostrarPilotos(pilotos);
+                    break;
+                case 1:
+                    System.out.println();
+                    Agregar.agregarPiloto(pilotos);
+                    break;
+                case 2:
+                    System.out.println();
+                    Buscar.buscarPiloto(pilotos);
+                    break;
+                case 3:
+                    seguir = false;
+                    System.out.println();
+                    Sobreescribir.sobreescribirPiloto(pilotos);
+                    break;
+            }
         }
+
     }
 }

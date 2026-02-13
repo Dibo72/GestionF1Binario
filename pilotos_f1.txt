@@ -1,0 +1,5 @@
+Verstappen, Red Bull, 255
+Hamilton, Mercedes, 190
+Alonso, Aston Martin, 170
+Leclerc, Ferrari, 185
+Sainz, Williams Racing, 203
